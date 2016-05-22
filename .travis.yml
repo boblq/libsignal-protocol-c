@@ -16,7 +16,7 @@ rvm:
 before_install:
   - gem update bundler --no-document
 before_script:
-  - JRUBY_OPTS="--server -Dcext.enabled=false -Xcompile.invokedynamic=false"
+  - unset JRUBY_OPTS
 script: ruby -Ilib exe/rake
 matrix:
   allow_failures:
